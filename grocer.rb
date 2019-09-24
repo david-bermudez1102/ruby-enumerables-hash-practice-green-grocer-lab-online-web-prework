@@ -1,11 +1,10 @@
 def consolidate_cart(cart)
-  cart.each do |e|
+  cart_count = Hash.new()
+  cart.uniq.each do |e|
     e.each do |key,value|
-      value.each do |key2|
-        key2["count"] = 1
-      end
+       value.store(:count,cart.count(e))
     end
-  end
+   end
 end
 
 def apply_coupons(cart, coupons)
