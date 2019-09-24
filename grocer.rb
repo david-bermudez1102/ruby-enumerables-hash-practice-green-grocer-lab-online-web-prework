@@ -3,8 +3,10 @@ def consolidate_cart(cart)
   cart.uniq.each do |e|
     e.each do |key,value|
        value.store(:count,cart.count(e))
+       cart_count[key] = value
     end
    end
+   return cart_count
 end
 
 def apply_coupons(cart, coupons)
