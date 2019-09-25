@@ -12,7 +12,7 @@ end
 def apply_coupons(cart, coupons)
   coupons.each do |e|
     e.each_char do |key,value|
-      cart[]
+      cart[key+" W/COUPON"] = 0
     end
   end
 end
