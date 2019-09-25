@@ -11,7 +11,8 @@ end
 
 def apply_coupons(cart, coupons)
   coupons.each do |e|
-    e.each do |key,value|
+    e.each do new_key,|key,value| 
+      new_key = key+" W/COUPON"
       cart[key+" W/COUPON"] = value
     end
   end
