@@ -11,7 +11,9 @@ end
 
 def apply_coupons(cart, coupons)
   coupons.each do |e|
-    cart[]
+    e.each_char do |key,value|
+      cart[]
+    end
   end
 end
 
